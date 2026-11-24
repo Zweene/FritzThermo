@@ -1,0 +1,11 @@
+# Build-Ergebnisse
+build/
+*.app
+
+# macOS
+.DS_Store
+
+# Bilder/Screenshots nicht versehentlich hochladen
+*.png
+*.jpg
+*.jpeg
