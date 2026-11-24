@@ -25,6 +25,19 @@ Eine kleine Menüleisten-App für macOS. Sie zeigt die Temperaturen deiner **FRI
 
 ## Installation
 
+### Einfach: DMG herunterladen
+
+1. Unter [**Releases**](https://github.com/Zweene/FritzThermo/releases) die neueste `FritzThermo-x.y.dmg` herunterladen.
+2. DMG öffnen und **FritzThermo** auf **Programme** ziehen.
+3. FritzThermo aus dem Programme-Ordner starten.
+
+**Hinweis beim ersten Start:** Die App ist nicht von Apple notarisiert. macOS meldet deshalb, dass der Entwickler nicht überprüft werden kann.
+- **macOS 15 und neuer:** *Systemeinstellungen → Datenschutz & Sicherheit* öffnen, nach unten scrollen und bei FritzThermo auf **„Dennoch öffnen“** klicken.
+- **macOS 13/14:** Rechtsklick auf die App, **Öffnen** wählen und noch einmal **Öffnen** bestätigen.
+- Alternativ im Terminal: `xattr -dr com.apple.quarantine /Applications/FritzThermo.app`
+
+### Selbst bauen
+
 ```
 git clone https://github.com/Zweene/FritzThermo.git
 cd FritzThermo
@@ -48,6 +61,15 @@ Ohne git: Auf GitHub **Code → Download ZIP** wählen, entpacken und im Termina
 Der Benutzer braucht unter *System → FRITZ!Box-Benutzer* das Recht **„Smart Home“**. Empfehlung: einen eigenen Benutzer nur mit diesem Recht anlegen.
 
 Bleibt das Feld **Benutzer** leer, verwendet die App den zuletzt angemeldeten FRITZ!Box-Benutzer.
+
+## DMG selbst erstellen
+
+```
+chmod +x make-dmg.sh
+./make-dmg.sh 1.0
+```
+
+Das Skript erzeugt `FritzThermo-1.0.dmg` als Universal-App für Apple Silicon und Intel.
 
 ## Update
 
